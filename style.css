@@ -1,0 +1,158 @@
+/* General styling of the site */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  --color-left: black;
+  --color-right: black;
+}
+/*Setting up the grid-template for the site, 3 Columns for the articles and 6 rows for the specific content */
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a-a b-a c-a"
+    "a-b b-b c-b"
+    "a-c b-c c-c"
+    "a-d b-d c-d"
+    "a-e b-e c-e"
+    "a-f b-f c-f";
+  gap: 3rem;
+}
+/* Styling of the containers 
+body {
+  background-image: linear-gradient(to bottom, white, rgb(169, 163, 163));
+  z-index: -1;
+}
+.cont {
+  border: 0.2 rem solid grey;
+  border-radius: 1.2rem;
+  background-color: white;
+  box-shadow: 1rem 1rem 1rem grey;
+  padding: -2rem;
+}*/
+/*.cont-a {
+  border: 0.2 rem solid grey;
+  border-radius: 1.2rem;
+  background-color: rgb(194, 194, 194);
+  margin: 2rem;
+}*/
+/*Styling of the Image and text within */
+img {
+  margin: 0;
+  border-radius: 0.8rem;
+  width: 100%;
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.98) 50%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.98) 50%
+  );
+}
+.b-a {
+  margin-top: 2rem;
+}
+.news {
+  position: relative;
+  width: 5.5rem;
+  height: 1.2rem;
+  top: 2rem;
+  right: 0.8rem;
+  font-size: 75%;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  float: right;
+  background-color: white;
+  z-index: 1;
+}
+.photo {
+  position: relative;
+  bottom: 1rem;
+  float: left;
+  font-size: 0.6rem;
+}
+/* Article styling */
+article {
+  margin-left: 2rem;
+}
+/* Pricetag styling */
+.price {
+  text-align: center;
+  margin: 1rem;
+  width: 90%;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+/* Styling of the dropdown-menus */
+.dropdown {
+  margin-left: 2rem;
+}
+.quantity {
+  margin-left: 10rem;
+}
+/* Styling of the color-pick*/
+aside {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--color-left) 50%,
+    var(--color-right) 50%
+  );
+  margin-left: 1rem;
+}
+.color-one {
+  --color-left: blue;
+  --color-right: blue;
+}
+.color-two {
+  --color-left: red;
+  --color-right: red;
+}
+.color-four {
+  --color-left: olive;
+  --color-right: black;
+}
+.color-five {
+  --color-left: blue;
+  --color-right: black;
+}
+.color-six {
+  --color-left: salmon;
+  --color-right: black;
+}
+.color-seven {
+  --color-left: red;
+  --color-right: white;
+}
+.color-eight {
+  --color-right: white;
+}
+.color-picker {
+  display: inline-flex;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+/*Styling of the Add-to-Cart-Button*/
+.shop {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 85%;
+  height: 3rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 180%;
+  background-color: rgb(75, 75, 255);
+  box-shadow: 1.5rem;
+  color: white;
+  justify-content: center;
+}
